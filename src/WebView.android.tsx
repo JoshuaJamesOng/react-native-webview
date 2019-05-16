@@ -213,6 +213,7 @@ class WebView extends React.Component<AndroidWebViewProps, State> {
 
   render() {
     const {
+      width,
       onMessage,
       onShouldStartLoadWithRequest: onShouldStartLoadWithRequestProp,
       originWhitelist,
@@ -291,7 +292,7 @@ class WebView extends React.Component<AndroidWebViewProps, State> {
     );
 
     return (
-      <View style={styles.container}>
+      <View style={{...styles.container, overflow: width === 0 ? 'visible' : 'hidden'}}>
         {webView}
         {otherView}
       </View>

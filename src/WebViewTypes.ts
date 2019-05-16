@@ -422,6 +422,11 @@ export interface AndroidWebViewProps extends WebViewSharedProps {
   onContentSizeChange?: (event: WebViewEvent) => void;
 
   /**
+   * Measured width
+   */
+  width: number;
+
+  /**
    * https://developer.android.com/reference/android/view/View#OVER_SCROLL_NEVER
    * Sets the overScrollMode. Possible values are:
    *
